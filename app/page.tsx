@@ -3,11 +3,40 @@
 import { useState } from "react";
 
 export default function Home() {
+
+
+  const steps = [
+    {
+      question: "Will You Be My Valentine?",
+      buttons: ["Yes, I Do", "Obviously!"],
+    },
+    {
+      question: "Are You Really Sure? 💖",
+      buttons: ["100% Yes", "Absolutely"],
+    },
+    {
+      question: "Forever & Always? 💍",
+      buttons: ["Forever ❤️", "Till Eternity"],
+    },
+    {
+      question: "Yay! I Knew It 😍",
+      buttons: ["💖", "💖"],
+    },
+  ];
+
+
+
   const [showLetter, setShowLetter] = useState(false);
+  const [step, setStep] = useState(0);
+  const handleClick = () => {
+    if (step < steps.length - 1) {
+      setStep(step + 1);
+    }
+  };
   return (
     <>
       <section className="relative w-full h-2500 overflow-hidden ">
-        {/* Background Image */}
+        
         <div
           className="absolute inset-0 bg-center bg-cover"
           style={{
@@ -15,9 +44,7 @@ export default function Home() {
           }}
         />
 
-        {/* Overlay (optional dark layer) */}
-
-        {/* Content */}
+       
         <div className="relative z-10 flex flex-col  h-full text-white pt-80">
 
           <h2 className="text-[841426]  text-center leading-tight
@@ -100,44 +127,52 @@ export default function Home() {
 
             </div>
           </div>
+        
+          {!showLetter && (
+            <div
+              className="ml-[36%] mr-[35%] mt-430 cursor-pointer"
+              onClick={() => setShowLetter(true)}
+            >
+              <img
+                src="/letter_box.png"
+                alt=""
+                className="animate-bounce"
+              />
+            </div>
+          )}
 
-
- {/* FIRST DIV (Click wala) */}
-      {!showLetter && (
-        <div
-          className="ml-[36%] mr-[35%] mt-430 cursor-pointer"
-          onClick={() => setShowLetter(true)}
-        >
-          <img
-            src="/letter_box.png"
-            alt=""
-            className="animate-bounce"
-          />
-        </div>
-      )}
-
-
-        {/* SECOND DIV (Hidden initially) */}
-      {showLetter && (
-        <div className="bg-[url('/love_letter.png')] bg-no-repeat bg-cover 
+          {showLetter && (
+            <div className="bg-[url('/love_letter.png')] bg-no-repeat bg-cover 
           w-[380px] h-[500px] bg-center 
           ml-[37%] mr-[45%] mt-415">
 
-          <div className="flex flex-col text-center">
-            {/* content here */}
+              <div className="flex flex-col text-center">
+
+              </div>
+
+            </div>
+          )}
+
+          <div className="mt-610">
+            <h2 className="text-[841426]  text-center leading-tight text-[50px] sm:text-5xl lg:text-[80px] flex flex-col items-center gap-y-6">
+              <span className="font-playfair-display font-normal text-[#E5A292]">Forever Starts Here.</span>
+              <span className="font-cormorant text-4xl text-[#E5A292]">{steps[step].question}</span>
+            </h2>
+           
+            <div className="flex items-center justify-center gap-5 mt-12">
+              {steps[step].buttons.map((btn, index) => (
+                <button
+                  key={index}
+                  onClick={handleClick}
+                  className="w-[180px] py-3 rounded-full  bg-white/20 backdrop-blur-md  border border-white/30
+              text-white font-semibold shadow-lg  hover:bg-white/30 hover:scale-105 transition cursor-pointer"
+                >
+                  {btn}
+                </button>
+              ))}
+            </div>
           </div>
-
         </div>
-      )}
-
-
-
-
-
-
-        </div>
-
-
       </section>
 
     </>
