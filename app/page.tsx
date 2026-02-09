@@ -146,7 +146,7 @@ export default function Home() {
   <div
           className=" absolute inset-0 bg-center bg-cover bg-no-repeat block lg:hidden"
           style={{
-            backgroundImage: "url('/bg_forever_mobile3.png')",
+            backgroundImage: "url('/bg_forever_mobile6.png')",
           }}
         />
 
@@ -316,9 +316,9 @@ export default function Home() {
             <div className="bg-[url('/love_letter.png')] bg-no-repeat bg-cover 
           md:w-[380px] md:h-[500px] w-[285px] h-[350px] bg-center 
           md:ml-[37%] mr-[45%] ml-[10%] md:mt-390 mt-80 md:mb-30 mb-0 md:py-20 py-6 px-10 animate-bounce [animation-duration:3s]">
-<div className="flex flex-col-2 gap-2 justify-end items-end pr-4 -rotate-6"><img src="" alt="" className="w-12 h-12 border-6"/>
+{/* <div className="flex flex-col-2 gap-2 justify-end items-end pr-4 -rotate-6"><img src="" alt="" className="w-12 h-12 border-6"/>
 <img src="" alt="" className="w-12 h-12 border-4"/>
-</div>
+</div> */}
 
               <div className="flex flex-col -rotate-4 pl-2">
 <h2 className="text-black font-cormorant md:text-3xl text-xl">
@@ -352,7 +352,7 @@ export default function Home() {
           )}
 
           {showBook && (
-            <div className="bg-[url('/open_book.png')] bg-no-repeat bg-cover  md:w-140 md:h-85 w-100 h-60 bg-center md:ml-[37%] ml-[4%] mr-[45%] md:mt-150 mt-70">
+            <div className="bg-[url('/open_book.png')] bg-no-repeat bg-cover  md:w-140 md:h-85 w-80 h-70 bg-center md:ml-[37%] ml-[8%] mr-[45%] md:mt-150 mt-70">
 
               <div className="flex flex-col text-center">
 
