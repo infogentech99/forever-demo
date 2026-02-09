@@ -1,26 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export default function Home() {
 
 
   const steps = [
     {
-      question: "Will You Be My Valentine?",
-      buttons: ["Yes, I Do", "Obviously!"],
+      question: "When did I First Fell For You? 💘",
+      buttons: ["Jan 29", "Feb 12", "Jan28", "I Don't Remember"],
     },
     {
-      question: "Are You Really Sure? 💖",
-      buttons: ["100% Yes", "Absolutely"],
+      question: "What is the gift that I bought you on our first date? 🎁",
+      buttons: ["Teddy", "Chocolate", "Flowers", "Never gifted"],
     },
     {
-      question: "Forever & Always? 💍",
-      buttons: ["Forever ❤️", "Till Eternity"],
+      question: "Tell me where do you want to travel next? 🌍",
+      buttons: ["Kenya", "Greece", "Italy", "Japan"],
     },
     {
-      question: "Yay! I Knew It 😍",
-      buttons: ["💖", "💖"],
+      question: "Will you be my valentine? 💝",
+      buttons: ["yes 💖", "No 😡"],
     },
   ];
 
@@ -29,6 +29,36 @@ export default function Home() {
   const [showLetter, setShowLetter] = useState(false);
    const [showBook, setShowBook] = useState(false);
   const [step, setStep] = useState(0);
+  
+
+
+ const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [started, setStarted] = useState(false);
+  const [playing, setPlaying] = useState(false);
+
+  const startMusic = () => {
+    if (!audioRef.current) return;
+    audioRef.current.volume = 0.3;
+    audioRef.current.play();
+    setStarted(true);
+    setPlaying(true);
+  };
+
+  const toggleMusic = () => {
+    if (!audioRef.current) return;
+
+    if (playing) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    setPlaying(!playing);
+  };
+
+
+
+
+
   const handleClick = () => {
     if (step < steps.length - 1) {
       setStep(step + 1);
@@ -36,6 +66,19 @@ export default function Home() {
   };
   return (
     <>
+
+    <button
+        onClick={() => {
+          started ? toggleMusic() : startMusic();
+        }}
+        className="fixed bottom-4 right-4 z-50 bg-[#FF35A1] text-white p-3 rounded-xl text-xl"
+      >
+        {playing ? "⏸" : "▶"}
+      </button>
+
+      <audio ref={audioRef} src="/valentine.mp3" loop />
+
+      
       <section className="relative w-full h-2500 overflow-hidden ">
         
         <div
