@@ -314,7 +314,7 @@ export default function Home() {
 
           {showLetter && (
             <div className="bg-[url('/love_letter.png')] bg-no-repeat bg-cover 
-          md:w-[380px] md:h-[500px] w-[285px] h-full bg-center 
+          md:w-[380px] md:h-[500px] w-[285px] h-[500px] bg-center 
           md:ml-[37%] mr-[45%] ml-[10%] md:mt-390 mt-80 md:mb-30 mb-0 md:py-20 py-6 px-10 animate-bounce [animation-duration:3s]">
 {/* <div className="flex flex-col-2 gap-2 justify-end items-end pr-4 -rotate-6"><img src="" alt="" className="w-12 h-12 border-6"/>
 <img src="" alt="" className="w-12 h-12 border-4"/>
@@ -352,7 +352,7 @@ export default function Home() {
           )}
 
           {showBook && (
-            <div className="bg-[url('/open_book.png')] bg-no-repeat bg-cover  md:w-140 md:h-85 w-80 h-70 bg-center md:ml-[37%] ml-[8%] mr-[45%] md:mt-150 mt-70">
+            <div className="bg-[url('/open_book.png')] bg-no-repeat bg-cover  md:w-140 md:h-85 w-80 h-70 bg-center md:ml-[37%] ml-[8%] mr-[45%] md:mt-150 mt-60">
 
               <div className="flex flex-col text-center">
 
