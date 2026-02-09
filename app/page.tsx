@@ -314,7 +314,7 @@ export default function Home() {
 
           {showLetter && (
             <div className="bg-[url('/love_letter.png')] bg-no-repeat bg-cover 
-          md:w-[380px] md:h-[500px] w-[285px] h-[350px] bg-center 
+          md:w-[380px] md:h-[500px] w-[285px] h-full bg-center 
           md:ml-[37%] mr-[45%] ml-[10%] md:mt-390 mt-80 md:mb-30 mb-0 md:py-20 py-6 px-10 animate-bounce [animation-duration:3s]">
 {/* <div className="flex flex-col-2 gap-2 justify-end items-end pr-4 -rotate-6"><img src="" alt="" className="w-12 h-12 border-6"/>
 <img src="" alt="" className="w-12 h-12 border-4"/>
@@ -440,7 +440,7 @@ export default function Home() {
                     className="mt-8 rounded-full bg-[#800000] px-8 py-3
         text-white font-semibold hover:bg-red-700 transition"
                   >
-                     Forever 
+                     Forever ❤️
                   </button>
                 </div>
               </div>
