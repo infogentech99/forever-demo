@@ -367,7 +367,7 @@ export default function Home() {
   bg-no-repeat bg-center bg-cover lg:bg-cover py-16 md:min-h-130 h-160 w-full rounded-2xl overflow-hidden flex flex-col items-center justify-center">
             <h2 className="text-center leading-tight text-[30px] sm:text-5xl lg:text-[80px] flex flex-col items-center md:gap-y-6 ">
               <span className="font-playfair-display text-[#E5A292] ">Forever Starts Here.</span>
-              <span className="font-cormorant md:text-4xl text-[#E5A292] text-xl">{steps[step].question}</span>
+              <span className="font-cormorant md:text-4xl text-[#E5A292] text-xl px-12">{steps[step].question}</span>
             </h2>
 
             <div className="flex flex-col md:flex-row items-center justify-center gap-5 mt-12">
