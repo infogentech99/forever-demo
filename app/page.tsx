@@ -136,9 +136,17 @@ export default function Home() {
       <section className="relative w-full h-2200 overflow-hidden ">
 
         <div
-          className=" absolute inset-0 bg-center bg-cover"
+          className=" absolute inset-0 bg-center bg-cover hidden lg:block"
           style={{
             backgroundImage: "url('https://res.cloudinary.com/dx2di0mvx/image/upload/v1770626392/bg_forever_l0t5k1.png')",
+          }}
+        />
+
+
+  <div
+          className=" absolute inset-0 bg-center bg-cover bg-no-repeat block lg:hidden"
+          style={{
+            backgroundImage: "url('/bg_forever_mobile.png')",
           }}
         />
 
@@ -208,7 +216,7 @@ export default function Home() {
 
 
 
-        <div className="relative z-10 flex flex-col  h-full text-white pt-80">
+        <div className="relative z-10 flex flex-col  h-full text-white lg:pt-80 pt-20">
 
           <h2 className="text-[841426]  text-center leading-tight
      text-[50px] sm:text-5xl lg:text-[80px]
@@ -307,10 +315,24 @@ export default function Home() {
           {showLetter && (
             <div className="bg-[url('/love_letter.png')] bg-no-repeat bg-cover 
           w-[380px] h-[500px] bg-center 
-          ml-[37%] mr-[45%] mt-390 mb-30">
+          ml-[37%] mr-[45%] mt-390 mb-30 py-20 px-10 animate-bounce [animation-duration:3s]">
+<div className="flex flex-col-2 gap-2 justify-end items-end pr-4 -rotate-6"><img src="" alt="" className="w-12 h-12 border-6"/>
+<img src="" alt="" className="w-12 h-12 border-4"/>
+</div>
 
-              <div className="flex flex-col text-center">
+              <div className="flex flex-col -rotate-4 pl-2">
+<h2 className="text-black font-cormorant text-3xl ">
+  My Love, ❤️
 
+</h2>
+
+<h2 className="text-[#515151] mt-6 font-cormorant pr-4 text-xl ">
+  You make every ordinary moment feel special just by being you. Your smile means more to me than words can say. This Valentine’s Day, I just want you to know that my heart chooses you today and always.
+
+</h2>
+              <h2 className="text-black font-cormorant text-xl mt-2">Forever yours, ❤️
+
+              </h2>
               </div>
 
             </div>
@@ -330,9 +352,7 @@ export default function Home() {
           )}
 
           {showBook && (
-            <div className="bg-[url('/card1.png')] bg-no-repeat bg-cover 
-          w-[380px] h-[500px] bg-center 
-          ml-[37%] mr-[45%] mt-150 ">
+            <div className="bg-[url('/card1.png')] bg-no-repeat bg-cover  w-95 h-125 bg-center ml-[37%] mr-[45%] mt-150 ">
 
               <div className="flex flex-col text-center">
 
