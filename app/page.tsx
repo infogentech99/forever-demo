@@ -140,13 +140,13 @@ export default function Home() {
  {/* Decorative Lamps - Natural Flow Pattern */}
         {/* Left-to-Right Lamps - Less crowded */}
       
-        <FloationBallon className="absolute top-70 left-60 w-14 h-14 transform rotate-15 opacity-80" />
-        <FloationBallon className="absolute top-90 left-80 w-14 h-14 transform rotate-25 opacity-75" />
-        <FloationBallon className="absolute top-110 left-100 w-18 h-18 transform rotate-10 opacity-85" />
-        <FloationBallon className="absolute top-130 left-120 w-14 h-14 transform rotate-35 opacity-75" />
-        <FloationBallon className="absolute top-150 left-140 w-18 h-18 transform rotate-22 opacity-85" />
-        <FloationBallon className="absolute top-170 left-160 w-14 h-14 transform rotate-18 opacity-80" />
-        <FloationBallon className="absolute top-190 left-180 w-14 h-14 transform rotate-28 opacity-85" />
+        <FloationBallon className="absolute top-20 left-60 w-14 h-14 transform rotate-15 opacity-80" />
+        <FloationBallon className="absolute top-30 left-80 w-14 h-14 transform rotate-25 opacity-75" />
+        <FloationBallon className="absolute top-50 left-100 w-18 h-18 transform rotate-10 opacity-85" />
+        <FloationBallon className="absolute top-60 left-120 w-14 h-14 transform rotate-35 opacity-75" />
+        <FloationBallon className="absolute top-70 left-140 w-18 h-18 transform rotate-22 opacity-85" />
+        <FloationBallon className="absolute top-80 left-160 w-14 h-14 transform rotate-18 opacity-80" />
+        <FloationBallon className="absolute top-90 left-180 w-14 h-14 transform rotate-28 opacity-85" />
 
 
         <FloationBallon className="hidden lg:block absolute top-50 left-40 w-14 h-14 transform rotate-30 opacity-85" />
@@ -156,7 +156,7 @@ export default function Home() {
         <FloationBallon className="hidden lg:block absolute top-120 left-120 w-18 h-18 transform rotate-35 opacity-75" />
         <FloationBallon className="hidden lg:block absolute top-140 left-140 w-18 h-18 transform rotate-22 opacity-85" />
         <FloationBallon className="hidden lg:block absolute top-160 left-160 w-18 h-18 transform rotate-18 opacity-80" />
-        <FloationBallon className="hidden lg:block absolute top-180 left-180 w-18 h-18 transform rotate-28 opacity-85" />
+        <FloationBallon className="hidden lg:block absolute top-40 left-180 w-18 h-18 transform rotate-28 opacity-85" />
 
          {/* <FloationBallon className="hidden lg:block absolute top-50 left-40 w-40 h-40 transform rotate-30 opacity-85" />
         <FloationBallon className="hidden lg:block absolute top-60 left-40 w-40 h-40 transform rotate-15 opacity-80" />
@@ -168,15 +168,15 @@ export default function Home() {
 
         {/* Right-to-Left Lamps - Less crowded */}
         <FloationBallon className="absolute top-20 right-12 w-14 h-14 transform -rotate-6 opacity-85" reverse={true} />
-        <FloationBallon className="absolute top-40 right-32 w-14 h-14 transform -rotate-12 opacity-75" reverse={true} />
-        <FloationBallon className="absolute top-60 right-52 w-14 h-14 transform -rotate-20 opacity-90" reverse={true} />
-        <FloationBallon className="absolute top-80 right-72 w-14 h-14 transform -rotate-8 opacity-85" reverse={true} />
-        <FloationBallon className="absolute top-100 right-92 w-14 h-14 transform -rotate-15 opacity-80" reverse={true} />
-        <FloationBallon className="absolute top-120 right-112 w-14 h-14 transform -rotate-25 opacity-90" reverse={true} />
-        <FloationBallon className="absolute top-140 right-132 w-26 h-26 transform -rotate-18 opacity-80" reverse={true} />
-        <FloationBallon className="absolute top-160 right-152 w-14 h-14 transform -rotate-30 opacity-75" reverse={true} />
-        <FloationBallon className="absolute top-180 right-172 w-14 h-14 transform -rotate-22 opacity-85" reverse={true} />
-        <FloationBallon className="absolute top-200 right-192 w-14 h-14 transform -rotate-35 opacity-85" reverse={true} />
+        <FloationBallon className="absolute top-30 right-32 w-14 h-14 transform -rotate-12 opacity-75" reverse={true} />
+        <FloationBallon className="absolute top-50 right-52 w-14 h-14 transform -rotate-20 opacity-90" reverse={true} />
+        <FloationBallon className="absolute top-60 right-72 w-14 h-14 transform -rotate-8 opacity-85" reverse={true} />
+        <FloationBallon className="absolute top-80 right-92 w-14 h-14 transform -rotate-15 opacity-80" reverse={true} />
+        <FloationBallon className="absolute top-100 right-112 w-14 h-14 transform -rotate-25 opacity-90" reverse={true} />
+        <FloationBallon className="absolute top-105 right-132 w-26 h-26 transform -rotate-18 opacity-80" reverse={true} />
+        <FloationBallon className="absolute top-25 right-152 w-14 h-14 transform -rotate-30 opacity-75" reverse={true} />
+        <FloationBallon className="absolute top-45 right-172 w-14 h-14 transform -rotate-22 opacity-85" reverse={true} />
+        <FloationBallon className="absolute top-55 right-192 w-14 h-14 transform -rotate-35 opacity-85" reverse={true} />
 
 
         <FloationBallon className="hidden lg:block absolute top-30 right-12 w-14 h-14 transform -rotate-6 opacity-85" reverse={true} />
@@ -186,8 +186,8 @@ export default function Home() {
         <FloationBallon className="hidden lg:block absolute top-110 right-92 w-18 h-18 transform -rotate-15 opacity-80" reverse={true} />
         <FloationBallon className="hidden lg:block absolute top-130 right-112 w-18 h-18 transform -rotate-25 opacity-90" reverse={true} />
         <FloationBallon className="hidden lg:block absolute top-150 right-132 w-18 h-18 transform -rotate-18 opacity-80" reverse={true} />
-        <FloationBallon className="hidden lg:block absolute top-170 right-152 w-18 h-18 transform -rotate-30 opacity-75" reverse={true} />
-        <FloationBallon className="hidden lg:block absolute top-190 right-172 w-18 h-18 transform -rotate-22 opacity-85" reverse={true} />
+        <FloationBallon className="hidden lg:block absolute top-85 right-152 w-18 h-18 transform -rotate-30 opacity-75" reverse={true} />
+        <FloationBallon className="hidden lg:block absolute top-75 right-172 w-18 h-18 transform -rotate-22 opacity-85" reverse={true} />
 
 
         {/* <FloationBallon className="hidden lg:block absolute top-150 right-132 w-40 h-40 transform -rotate-18 opacity-80" reverse={true} />
