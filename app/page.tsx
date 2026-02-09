@@ -101,12 +101,12 @@ export default function Home() {
   const handleClick = (btn:any) => {
     const isLast = steps[step].question === "Will you be my valentine? 💝";
 
-    if (isLast && btn === "No 😡") {
+    if (isLast && btn === "I need a second") {
       setShowPopup(true);
       return;
     }
 
-    if (isLast && btn === "yes 💖") {
+    if (isLast && btn === "Yes, always") {
       setShowYesScreen(true);
       return;
     }
