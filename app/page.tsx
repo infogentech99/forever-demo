@@ -133,7 +133,7 @@ export default function Home() {
       <audio ref={audioRef} src="/valentine.mp3" loop />
 
 
-      <section className="relative w-full md:h-2200 h-1300 overflow-hidden ">
+      <section className="relative w-full md:h-2200 h-1050 overflow-hidden ">
 
         <div
           className=" absolute inset-0 bg-center bg-cover hidden lg:block"
@@ -146,7 +146,7 @@ export default function Home() {
   <div
           className=" absolute inset-0 bg-center bg-cover bg-no-repeat block lg:hidden"
           style={{
-            backgroundImage: "url('/bg_forever_mobile2.png')",
+            backgroundImage: "url('/bg_forever_mobile3.png')",
           }}
         />
 
@@ -362,7 +362,7 @@ export default function Home() {
           )}
 
 
-          <div className="md:mt-230 mt-100 mx-4">
+          <div className="md:mt-230 mt-80 mx-4">
     <div className="bg-[url('/question_bg.png')]
   bg-no-repeat bg-center bg-cover lg:bg-cover py-16 md:min-h-130 h-160 w-full rounded-2xl overflow-hidden flex flex-col items-center justify-center">
             <h2 className="text-center leading-tight text-[30px] sm:text-5xl lg:text-[80px] flex flex-col items-center md:gap-y-6 ">
