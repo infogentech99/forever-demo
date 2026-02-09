@@ -1,6 +1,44 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState,useMemo } from "react";
+
+
+const FloationBallon = ({ className, style, reverse = false }: { className: string; style?: React.CSSProperties; reverse?: boolean }) => {
+  // Memoize random values to prevent recalculation on re-renders
+  const lampValues = useMemo(() => {
+    // const duration = 60 + Math.random() * 40; // 60–100s (very slow flow)
+    // const duration = 40 + Math.random() * 10; // 40–50s
+    const duration = 60 + Math.random() * 10; // 60–70s
+    const delay = Math.random() * 15;
+
+    // depth feel - dramatic size variety
+    const scale = Math.random() < 0.5
+      ? 0.3 + Math.random() * 0.4  // 0.3–0.7 (small lamps)
+      : 1.2 + Math.random() * 0.8; // 1.2–2.0 (large lamps)
+    const blur = scale < 0.7 ? "blur(1.5px)" : "blur(0px)";
+
+    return { duration, delay, scale, blur };
+  }, []); // Empty dependency array means these values are calculated only once
+
+  return (
+    <img
+      src="/ballon.png"
+      alt="Balloon"
+      className={`floating-lamp ${className}`}
+      style={{
+        animationName: reverse ? 'lampFlowReverse' : 'lampFlow',
+        animationDuration: `${lampValues.duration}s`,
+        animationDelay: `${lampValues.delay}s`,
+        transform: `scale(${lampValues.scale})`,
+        filter: `drop-shadow(0 0 18px rgba(255,180,90,0.9)) ${lampValues.blur}`,
+        '--scale': lampValues.scale,
+        ...style,
+      } as React.CSSProperties}
+    />
+  );
+};
+
+
 
 export default function Home() {
 
@@ -27,12 +65,12 @@ export default function Home() {
 
 
   const [showLetter, setShowLetter] = useState(false);
-   const [showBook, setShowBook] = useState(false);
+  const [showBook, setShowBook] = useState(false);
   const [step, setStep] = useState(0);
-  
 
 
- const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   const [started, setStarted] = useState(false);
   const [playing, setPlaying] = useState(false);
 
@@ -64,10 +102,19 @@ export default function Home() {
       setStep(step + 1);
     }
   };
+
+
+
+
+
+
+
+
+  
   return (
     <>
 
-    <button
+      <button
         onClick={() => {
           started ? toggleMusic() : startMusic();
         }}
@@ -78,9 +125,9 @@ export default function Home() {
 
       <audio ref={audioRef} src="/valentine.mp3" loop />
 
-      
+
       <section className="relative w-full h-2200 overflow-hidden ">
-        
+
         <div
           className="absolute inset-0 bg-center bg-cover"
           style={{
@@ -88,7 +135,73 @@ export default function Home() {
           }}
         />
 
-       
+
+
+ {/* Decorative Lamps - Natural Flow Pattern */}
+        {/* Left-to-Right Lamps - Less crowded */}
+      
+        <FloationBallon className="absolute top-70 left-60 w-14 h-14 transform rotate-15 opacity-80" />
+        <FloationBallon className="absolute top-90 left-80 w-14 h-14 transform rotate-25 opacity-75" />
+        <FloationBallon className="absolute top-110 left-100 w-18 h-18 transform rotate-10 opacity-85" />
+        <FloationBallon className="absolute top-130 left-120 w-14 h-14 transform rotate-35 opacity-75" />
+        <FloationBallon className="absolute top-150 left-140 w-18 h-18 transform rotate-22 opacity-85" />
+        <FloationBallon className="absolute top-170 left-160 w-14 h-14 transform rotate-18 opacity-80" />
+        <FloationBallon className="absolute top-190 left-180 w-14 h-14 transform rotate-28 opacity-85" />
+
+
+        <FloationBallon className="hidden lg:block absolute top-50 left-40 w-14 h-14 transform rotate-30 opacity-85" />
+        <FloationBallon className="hidden lg:block absolute top-60 left-40 w-18 h-18 transform rotate-15 opacity-80" />
+        <FloationBallon className="hidden lg:block absolute top-80 left-80 w-14 h-14 transform rotate-25 opacity-75" />
+        <FloationBallon className="hidden lg:block absolute top-100 left-100 w-18 h-18 transform rotate-10 opacity-85" />
+        <FloationBallon className="hidden lg:block absolute top-120 left-120 w-18 h-18 transform rotate-35 opacity-75" />
+        <FloationBallon className="hidden lg:block absolute top-140 left-140 w-18 h-18 transform rotate-22 opacity-85" />
+        <FloationBallon className="hidden lg:block absolute top-160 left-160 w-18 h-18 transform rotate-18 opacity-80" />
+        <FloationBallon className="hidden lg:block absolute top-180 left-180 w-18 h-18 transform rotate-28 opacity-85" />
+
+         {/* <FloationBallon className="hidden lg:block absolute top-50 left-40 w-40 h-40 transform rotate-30 opacity-85" />
+        <FloationBallon className="hidden lg:block absolute top-60 left-40 w-40 h-40 transform rotate-15 opacity-80" />
+        <FloationBallon className="hidden lg:block absolute top-80 left-80 w-40 h-40 transform rotate-25 opacity-75" /> */}
+        
+
+
+
+
+        {/* Right-to-Left Lamps - Less crowded */}
+        <FloationBallon className="absolute top-20 right-12 w-14 h-14 transform -rotate-6 opacity-85" reverse={true} />
+        <FloationBallon className="absolute top-40 right-32 w-14 h-14 transform -rotate-12 opacity-75" reverse={true} />
+        <FloationBallon className="absolute top-60 right-52 w-14 h-14 transform -rotate-20 opacity-90" reverse={true} />
+        <FloationBallon className="absolute top-80 right-72 w-14 h-14 transform -rotate-8 opacity-85" reverse={true} />
+        <FloationBallon className="absolute top-100 right-92 w-14 h-14 transform -rotate-15 opacity-80" reverse={true} />
+        <FloationBallon className="absolute top-120 right-112 w-14 h-14 transform -rotate-25 opacity-90" reverse={true} />
+        <FloationBallon className="absolute top-140 right-132 w-26 h-26 transform -rotate-18 opacity-80" reverse={true} />
+        <FloationBallon className="absolute top-160 right-152 w-14 h-14 transform -rotate-30 opacity-75" reverse={true} />
+        <FloationBallon className="absolute top-180 right-172 w-14 h-14 transform -rotate-22 opacity-85" reverse={true} />
+        <FloationBallon className="absolute top-200 right-192 w-14 h-14 transform -rotate-35 opacity-85" reverse={true} />
+
+
+        <FloationBallon className="hidden lg:block absolute top-30 right-12 w-14 h-14 transform -rotate-6 opacity-85" reverse={true} />
+        <FloationBallon className="hidden lg:block absolute top-50 right-32 w-14 h-14 transform -rotate-12 opacity-75" reverse={true} />
+        <FloationBallon className="hidden lg:block absolute top-70 right-52 w-18 h-18 transform -rotate-20 opacity-90" reverse={true} />
+        <FloationBallon className="hidden lg:block absolute top-90 right-72 w-18 h-18 transform -rotate-8 opacity-85" reverse={true} />
+        <FloationBallon className="hidden lg:block absolute top-110 right-92 w-18 h-18 transform -rotate-15 opacity-80" reverse={true} />
+        <FloationBallon className="hidden lg:block absolute top-130 right-112 w-18 h-18 transform -rotate-25 opacity-90" reverse={true} />
+        <FloationBallon className="hidden lg:block absolute top-150 right-132 w-18 h-18 transform -rotate-18 opacity-80" reverse={true} />
+        <FloationBallon className="hidden lg:block absolute top-170 right-152 w-18 h-18 transform -rotate-30 opacity-75" reverse={true} />
+        <FloationBallon className="hidden lg:block absolute top-190 right-172 w-18 h-18 transform -rotate-22 opacity-85" reverse={true} />
+
+
+        {/* <FloationBallon className="hidden lg:block absolute top-150 right-132 w-40 h-40 transform -rotate-18 opacity-80" reverse={true} />
+        <FloationBallon className="hidden lg:block absolute top-170 right-152 w-40 h-40 transform -rotate-30 opacity-75" reverse={true} />
+        <FloationBallon className="hidden lg:block absolute top-190 right-172 w-40 h-40 transform -rotate-22 opacity-85" reverse={true} /> */}
+
+
+
+
+        {/* <FallingLamps /> */}
+
+
+
+
         <div className="relative z-10 flex flex-col  h-full text-white pt-20">
 
           <h2 className="text-[841426]  text-center leading-tight
@@ -171,7 +284,7 @@ export default function Home() {
 
             </div>
           </div>
-        
+
           {!showLetter && (
             <div
               className="ml-[36%] mr-[35%] mt-390 cursor-pointer"
@@ -202,7 +315,7 @@ export default function Home() {
 
 
 
- {!showBook && (
+          {!showBook && (
             <div
               className="ml-[35%] mr-[20%] mt-160 cursor-pointer"
               onClick={() => setShowBook(true)}
@@ -235,7 +348,7 @@ export default function Home() {
               <span className="font-playfair-display font-normal text-[#E5A292]">Forever Starts Here.</span>
               <span className="font-cormorant text-4xl text-[#E5A292]">{steps[step].question}</span>
             </h2>
-           
+
             <div className="flex items-center justify-center gap-5 mt-12">
               {steps[step].buttons.map((btn, index) => (
                 <button
@@ -251,7 +364,7 @@ export default function Home() {
 
 
 
-            
+
           </div>
         </div>
       </section>
