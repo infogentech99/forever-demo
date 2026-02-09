@@ -346,7 +346,7 @@ export default function Home() {
               <img
                 src="/book.png"
                 alt=""
-                className="animate-bounce [animation-duration:2s] md:w-[550px] md:h-[400px] w-[420px] h-[290px]"
+                className="animate-bounce [animation-duration:2s] md:w-[550px] md:h-[400px] w-[420px] h-[200px]"
               />
             </div>
           )}
