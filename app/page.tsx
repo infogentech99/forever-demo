@@ -98,7 +98,7 @@ export default function Home() {
 
 
 
-  const handleClick = (btn) => {
+  const handleClick = (btn:any) => {
     const isLast = steps[step].question === "Will you be my valentine? 💝";
 
     if (isLast && btn === "No 😡") {
@@ -316,7 +316,6 @@ export default function Home() {
 
             </div>
           )}
-
 
           {!showBook && (
             <div
