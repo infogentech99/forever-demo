@@ -231,15 +231,15 @@ export default function Home() {
             <div className="flex flex-col   text-center mb-8">
 
               <h2 className="text-[#841426] lg:text-[30px] md:text-2xl text-[20px] md:mt-20 mt-12   -rotate-10">
-                <span className="font-carattere">The</span> <br />
-                <span className="font-dancing-script font-bold md:text-3xl text-[20px]">BEGINNING</span>
+                <span className="font-carattere">Where</span> <br />
+                <span className="font-dancing-script font-bold md:text-3xl text-[20px]">it all quietly</span>
                 <span className="font-carattere"> of</span> <br />
-                <span className="font-carattere md:text-5xl text-[28px]">Forever </span>
-                <span className="font-dancing-script font-bold"> STARTS HERE</span>
+                <span className="font-carattere md:text-5xl text-[28px]">began. </span>
+                {/* <span className="font-dancing-script font-bold"> STARTS HERE</span> */}
               </h2>
 
               <h2 className="text-black font-cormorant-upright lg:text-[30px] md:text-2xl text-[26px] -rotate-10">
-                First Meet
+                14 Feb 2021
               </h2>
 
             </div>
@@ -250,15 +250,15 @@ export default function Home() {
             <div className="flex flex-col   text-center mb-8">
 
               <h2 className="text-[#841426] lg:text-[30px] md:text-2xl text-[20px] md:mt-20 mt-12 -rotate-10">
-                <span className="font-carattere">The</span> <br />
-                <span className="font-dancing-script font-bold md:text-3xl text-[20px]">BEGINNING</span>
-                <span className="font-carattere"> of</span> <br />
-                <span className="font-carattere md:text-5xl text-[28px]">Forever</span>
-                <span className="font-dancing-script font-bold"> STARTS HERE</span>
+                <span className="font-carattere">A first</span> <br />
+                <span className="font-dancing-script font-bold md:text-3xl text-[20px]">date that felt</span>
+                <span className="font-carattere"> like</span> <br />
+                <span className="font-carattere md:text-5xl text-[28px]">fate.</span>
+                {/* <span className="font-dancing-script font-bold"> STARTS HERE</span> */}
               </h2>
 
               <h2 className="text-black font-cormorant-upright lg:text-[30px] md:text-2xl text-[22px] -rotate-10">
-                First Date
+                21 Mar 2021
               </h2>
 
             </div>
@@ -268,15 +268,15 @@ export default function Home() {
             <div className="flex flex-col   text-center mb-8">
 
               <h2 className="text-[#841426] lg:text-[30px] md:text-2xl text-[22px] md:mt-20 mt-12 -rotate-10">
-                <span className="font-carattere">The</span> <br />
-                <span className="font-dancing-script font-bold md:text-3xl text-[20px]">BEGINNING</span>
-                <span className="font-carattere"> of</span> <br />
-                <span className="font-carattere md:text-5xl text-[28px]">Forever</span>
-                <span className="font-dancing-script font-bold"> STARTS HERE</span>
+                <span className="font-carattere">A question</span> <br />
+                <span className="font-dancing-script font-bold md:text-3xl text-[20px]">that </span>
+                <span className="font-carattere"> changed</span> <br />
+                <span className="font-carattere md:text-5xl text-[28px]"> everything.</span>
+                {/* <span className="font-dancing-script font-bold"> STARTS HERE</span> */}
               </h2>
 
               <h2 className="text-black font-cormorant-upright lg:text-[30px] md:text-2xl text-[22px] -rotate-10">
-                Proposal
+                05 Nov 2023
               </h2>
             </div>
           </div>
@@ -285,15 +285,15 @@ export default function Home() {
             <div className="flex flex-col   text-center mb-8">
 
               <h2 className="text-[#841426] lg:text-[30px] md:text-2xl text-[22px] md:mt-20 mt-12 -rotate-10">
-                <span className="font-carattere">The</span> <br />
-                <span className="font-dancing-script font-bold md:text-3xl text-[20px]">BEGINNING</span>
-                <span className="font-carattere"> of</span> <br />
-                <span className="font-carattere md:text-5xl text-[28px]">Forever</span>
-                <span className="font-dancing-script font-bold"> STARTS HERE</span>
+                <span className="font-carattere">Two lives,</span> <br />
+                {/* <span className="font-dancing-script font-bold md:text-3xl text-[20px]">one forever.</span>
+                <span className="font-carattere"> of</span> <br /> */}
+                <span className="font-carattere md:text-5xl text-[28px]">one forever.</span>
+                {/* <span className="font-dancing-script font-bold"> STARTS HERE</span> */}
               </h2>
 
               <h2 className="text-black font-cormorant-upright lg:text-[30px] md:text-2xl text-[22px] -rotate-10">
-               Wedding
+               12 Jan 2025
               </h2>
 
             </div>
@@ -315,7 +315,7 @@ export default function Home() {
           {showLetter && (
             <div className="bg-[url('/love_letter.png')] bg-no-repeat bg-cover 
           md:w-[380px] md:h-[500px] w-[285px] h-[500px] bg-center 
-          md:ml-[37%] mr-[45%] ml-[10%] md:mt-390 mt-80 md:mb-30 mb-0 md:py-20 py-6 px-10 animate-bounce [animation-duration:3s]">
+          md:ml-[37%] mr-[45%] ml-[10%] md:mt-390 mt-80 md:mb-30 mb-0 md:py-20 py-6 px-10 ">
 {/* <div className="flex flex-col-2 gap-2 justify-end items-end pr-4 -rotate-6"><img src="" alt="" className="w-12 h-12 border-6"/>
 <img src="" alt="" className="w-12 h-12 border-4"/>
 </div> */}
@@ -449,7 +449,7 @@ export default function Home() {
           </div>
         </div>
 
-       <div className="fixed top-5 left-5 z-50">
+       {/* <div className="fixed top-5 left-5 z-50">
   <a href="https://book.invitearc.com/">
     <button className="flex items-center gap-3 border-white border-2 bg-white/0 backdrop-blur text-white px-6 py-3 rounded-full shadow-lg cursor-pointer">    
       <span className="text-3xl leading-none">←</span>
@@ -459,7 +459,7 @@ export default function Home() {
 
     </button>
   </a>
-</div> 
+</div>  */}
       </section>
 
     </>
