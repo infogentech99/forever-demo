@@ -301,7 +301,7 @@ export default function Home() {
           )}
 
           {showBook && (
-            <div className="bg-[url('https://res.cloudinary.com/dx2di0mvx/image/upload/v1770709714/open_book_sgbaod.png')] bg-no-repeat bg-cover  md:w-140 md:h-85 w-80 h-70 bg-center md:ml-[37%] ml-[8%] mr-[45%] md:mt-150 mt-60">
+            <div className="bg-[url('https://res.cloudinary.com/dx2di0mvx/image/upload/v1770709714/open_book_sgbaod.png')] bg-no-repeat bg-cover  md:w-185 md:h-110 w-80 h-70 bg-center md:ml-[25%] ml-[8%] mr-[45%] md:mt-150 mt-60">
 
               <div className="flex flex-col text-center">
 
