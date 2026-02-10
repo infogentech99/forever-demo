@@ -45,9 +45,9 @@ export default function Question() {
     };
     return (
         <>
-      <div className="w-full md:h-137 h-150 rounded-3xl overflow-hidden ">
+      <div className="w-full md:h-137 h-130 rounded-3xl overflow-hidden ">
   <div
-    className="w-full h-full bg-[url('/question_bg.png')] bg-no-repeat bg-center md:bg-contain bg-cover flex flex-col items-center justify-center rounded-3xl " >
+    className="w-full h-full md:bg-[url('/question_bg.png')] bg-[url('/question_bg_mobile.png')] bg-no-repeat bg-center md:bg-contain bg-contain flex flex-col items-center justify-center rounded-3xl " >
              <h2 className="text-center leading-tight text-[30px] sm:text-5xl lg:text-[80px] flex flex-col items-center md:gap-y-6">
                     <span className="font-playfair-display text-[#E5A292] ">Forever Starts Here.</span>
                     <span className="font-cormorant md:text-4xl text-[#E5A292] text-xl px-12">{steps[step].question}</span>
@@ -72,10 +72,10 @@ export default function Question() {
                     <div className="w-[90%] max-w-2xl rounded-3xl 
       bg-[url('/no_question_bg.png')] bg-no-repeat bg-center bg-contain
       px-10 py-14 text-center shadow-2xl  md:h-110 h-80 flex flex-col items-center justify-center md:gap-0">
-                        <h3 className="md:text-2xl text-[16px] md:font-semibold text-white md:mt-6 mt-14  font-cormorant">
+                        <h3 className="md:text-2xl text-[16px] font-semibold text-white md:mt-6 mt-14  font-cormorant">
                             Invalid choice.
                         </h3>
-                        <p className="text-white/80 md:text-[18px] text-[12px] font-cormorant px-12">
+                        <p className="text-white/80 md:text-[18px] text-[11px] font-cormorant px-12">
                             System has detected you are already my Valentine.
                         </p>
 
