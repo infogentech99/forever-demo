@@ -45,12 +45,10 @@ export default function Question() {
     };
     return (
         <>
-        <div className="w-full h-160 rounded-2xl overflow-hidden">
+      <div className="w-full md:h-137 h-150 rounded-3xl overflow-hidden ">
   <div
-    className="h-full bg-[url('/question_bg.png')] bg-no-repeat bg-center bg-cover
-    py-16 flex flex-col items-center justify-center"
-  >
-             <h2 className="text-center leading-tight text-[30px] sm:text-5xl lg:text-[80px] flex flex-col items-center md:gap-y-6 ">
+    className="w-full h-full bg-[url('/question_bg.png')] bg-no-repeat bg-center md:bg-contain bg-cover flex flex-col items-center justify-center rounded-3xl " >
+             <h2 className="text-center leading-tight text-[30px] sm:text-5xl lg:text-[80px] flex flex-col items-center md:gap-y-6">
                     <span className="font-playfair-display text-[#E5A292] ">Forever Starts Here.</span>
                     <span className="font-cormorant md:text-4xl text-[#E5A292] text-xl px-12">{steps[step].question}</span>
                 </h2>
@@ -60,9 +58,7 @@ export default function Question() {
                         <button
                             key={index}
                             onClick={() => handleClick(btn)}
-                            className="w-[180px] py-3 rounded-full bg-white/20 backdrop-blur-md
-      border border-white/30 text-white font-semibold shadow-lg
-      hover:bg-white/30 hover:scale-105 transition cursor-pointer"
+                            className="w-45 py-3 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white font-semibold shadow-lg  hover:bg-white/30 hover:scale-105 transition cursor-pointer"
                         >
                             {btn}
                         </button>
@@ -72,26 +68,20 @@ export default function Question() {
             </div>
             </div>
             {showPopup && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-md">
-                    <div className="relative w-[90%] max-w-xl rounded-2xl border border-red-500/50
-      bg-linear-to-b from-[#1b0f14] to-[#12080c]
-      px-8 py-10 text-center shadow-2xl">
-
-                        <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-red-600">
-                            <span className="text-3xl font-bold text-white">✕</span>
-                        </div>
-
-                        <h3 className="text-xl font-semibold text-red-500 mb-2">
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-md ">
+                    <div className="w-[90%] max-w-2xl rounded-3xl 
+      bg-[url('/no_question_bg.png')] bg-no-repeat bg-center bg-contain
+      px-10 py-14 text-center shadow-2xl  md:h-110 h-80 flex flex-col items-center justify-center md:gap-0">
+                        <h3 className="md:text-2xl text-[16px] md:font-semibold text-white md:mt-6 mt-14  font-cormorant">
                             Invalid choice.
                         </h3>
-                        <p className="text-white/80 text-sm">
+                        <p className="text-white/80 md:text-[18px] text-[12px] font-cormorant px-12">
                             System has detected you are already my Valentine.
                         </p>
 
                         <button
                             onClick={() => setShowPopup(false)}
-                            className="mt-6 rounded-full border border-red-500 px-6 py-2
-        text-red-400 hover:bg-red-500 hover:text-white transition"
+                            className="mt-4 rounded-full border border-red-500 md:px-6 px-4 md:py-2 py-1 text-red-400 text-[12px] md:text-xl hover:bg-red-500 hover:text-white transition cursor-pointer "
                         >
                             Try Again 💔
                         </button>
@@ -101,21 +91,22 @@ export default function Question() {
 
 
             {showYesScreen && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-md">
-                    <div className="w-[90%] max-w-2xl rounded-3xl border border-[#1b0f14]-500/50
-      bg-linear-to-b from-[#1b0f14] to-[#12080c]
-      px-10 py-14 text-center shadow-2xl">
-                        <h1 className="text-3xl sm:text-4xl font-semibold text-red-600 mb-4">
+                
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-md ">
+                    <div className="w-[90%] max-w-2xl rounded-3xl 
+      bg-[url('/yes_question_bg.png')] bg-no-repeat bg-center bg-contain
+      px-10 py-14 text-center shadow-2xl  md:h-100 h-80 flex flex-col items-center justify-center gap-2 md:gap-0">
+                        <h1 className="md:text-[32px] text-[16px] font-dancing-script font-bold text-red-600 md:mb-4 mb-0 ">
                             Yay! You're My Valentine!
                         </h1>
-                        <p className="text-lg text-white">
+                        <p className="md:text-[18px] text-[12px] text-[#FF4348] font-cormorant">
                             This moment feels complete with you.
                         </p>
 
                         <button
                             onClick={() => setShowYesScreen(false)}
-                            className="mt-8 rounded-full bg-[#800000] px-8 py-3
-        text-white font-semibold hover:bg-red-700 transition"
+                            className="md:mt-8 rounded-full bg-[#800000] md:px-8 md:py-3 py-2 px-4
+        text-white font-semibold hover:bg-red-700 transition text-[12px] md:text-xl font-cormorant cursor-pointer"
                         >
                             Forever ❤️
                         </button>
