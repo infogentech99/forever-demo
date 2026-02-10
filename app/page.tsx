@@ -83,7 +83,7 @@ export default function Home() {
         <div
           className=" absolute inset-0 bg-center bg-cover hidden lg:block"
           style={{
-            backgroundImage: "url('https://res.cloudinary.com/dx2di0mvx/image/upload/v1770626392/bg_forever_l0t5k1.png')",
+            backgroundImage: "url('https://res.cloudinary.com/dx2di0mvx/image/upload/v1770709090/forever_bg_indcwj.png')",
           }}
         />
 
@@ -91,7 +91,7 @@ export default function Home() {
   <div
           className=" absolute inset-0 bg-center bg-cover bg-no-repeat block lg:hidden"
           style={{
-            backgroundImage: "url('/bg_forever_mobile6.png')",
+            backgroundImage: "url('https://res.cloudinary.com/dx2di0mvx/image/upload/v1770709138/forever_bg_mobile_wasyg9.png')",
           }}
         />
 
@@ -132,7 +132,7 @@ export default function Home() {
         <FloationBallon className="absolute top-60 right-72 w-14 h-14 transform -rotate-8 opacity-85" reverse={true} />
         <FloationBallon className="absolute top-80 right-92 w-14 h-14 transform -rotate-15 opacity-80" reverse={true} />
         <FloationBallon className="absolute top-100 right-112 w-14 h-14 transform -rotate-25 opacity-90" reverse={true} />
-        <FloationBallon className="absolute top-105 right-132 w-26 h-26 transform -rotate-18 opacity-80" reverse={true} />
+        <FloationBallon className="absolute top-105 right-132 w-16 h-16 transform -rotate-18 opacity-80" reverse={true} />
         <FloationBallon className="absolute top-25 right-152 w-14 h-14 transform -rotate-30 opacity-75" reverse={true} />
         <FloationBallon className="absolute top-45 right-172 w-14 h-14 transform -rotate-22 opacity-85" reverse={true} />
         <FloationBallon className="absolute top-55 right-192 w-14 h-14 transform -rotate-35 opacity-85" reverse={true} />
@@ -161,7 +161,7 @@ export default function Home() {
 
 
 
-        <div className="relative z-10 flex flex-col  h-full text-white lg:pt-80 pt-20">
+        <div className="relative z-10 flex flex-col  h-full text-white lg:pt-20 pt-20">
 
           <h2 className="text-[841426]  text-center leading-tight
      text-[50px] sm:text-5xl lg:text-[80px]
@@ -226,7 +226,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="bg-[url('/card1.png')] bg-no-repeat  bg-cover md:w-[380px] md:h-[330px] w-[285px] h-[250px] bg-center ml-[10%] md:ml-[40.5%] mr-[45%] md:mt-65 mt-30">
+          <div className="bg-[url('/card1.png')] bg-no-repeat  bg-cover md:w-95 md:h-82.5 w-71.25 h-62.5 bg-center ml-[10%] md:ml-[40.5%] mr-[45%] md:mt-65 mt-30">
             <div className="flex flex-col   text-center mb-8">
 
               <h2 className="text-[#841426] lg:text-[30px] md:text-2xl text-[22px] md:mt-20 mt-12 -rotate-10">
@@ -246,7 +246,7 @@ export default function Home() {
 
           {!showLetter && (
             <div
-              className="md:ml-[36%] mr-[35%] ml-[20%] md:mt-405 mt-100 cursor-pointer"
+              className="md:ml-[36%] mr-[35%] ml-[20%] md:mt-390 mt-100 cursor-pointer"
               onClick={() => setShowLetter(true)}
             >
               <img
@@ -260,7 +260,7 @@ export default function Home() {
           {showLetter && (
             <div className="bg-[url('/love_letter.png')] bg-no-repeat bg-cover 
           md:w-[380px] md:h-[500px] w-[285px] h-[500px] bg-center 
-          md:ml-[37%] mr-[45%] ml-[10%] md:mt-390 mt-80 md:mb-30 mb-0 md:py-20 py-6 px-10 ">
+          md:ml-[37%] mr-[45%] ml-[10%] md:mt-350 mt-80 md:mb-30 mb-0 md:py-20 py-6 px-10 ">
 {/* <div className="flex flex-col-2 gap-2 justify-end items-end pr-4 -rotate-6"><img src="" alt="" className="w-12 h-12 border-6"/>
 <img src="" alt="" className="w-12 h-12 border-4"/>
 </div> */}
@@ -285,7 +285,7 @@ export default function Home() {
 
           {!showBook && (
             <div
-              className="ml-[35%] mr-[20%] md:mt-160 mt-70 cursor-pointer"
+              className="ml-[35%] mr-[20%] md:mt-140 mt-70 cursor-pointer"
               onClick={() => setShowBook(true)}
             >
               <img
@@ -307,7 +307,7 @@ export default function Home() {
           )}
 
 
-          <div className="md:mt-230 mt-80 mx-4">
+          <div className="md:mt-280 mt-80 mx-4">
 <Question/>
     </div>
         </div>
