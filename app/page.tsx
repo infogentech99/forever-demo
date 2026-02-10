@@ -293,7 +293,7 @@ export default function Home() {
               <img
                 src="https://res.cloudinary.com/dx2di0mvx/image/upload/v1770709719/book_tkraq1.png"
                 alt=""
-                className="animate-bounce [animation-duration:2s] md:w-[550px] md:h-[400px] w-[420px] h-[200px] transition-all duration-300
+                className="animate-bounce [animation-duration:2s] md:w-137 md:h-100 w-100 h-57 transition-all duration-300
                group-hover:scale-105
                group-hover:drop-shadow-[0_0_10px_rgba(255,215,0,0.9)]"
               />
@@ -301,7 +301,8 @@ export default function Home() {
           )}
 
           {showBook && (
-            <div className="bg-[url('https://res.cloudinary.com/dx2di0mvx/image/upload/v1770709714/open_book_sgbaod.png')] bg-no-repeat bg-cover  md:w-185 md:h-110 w-80 h-70 bg-center md:ml-[25%] ml-[8%] mr-[45%] md:mt-150 mt-60">
+            <div className="bg-[url('https://res.cloudinary.com/dx2di0mvx/image/upload/v1770709714/open_book_sgbaod.png')] bg-no-repeat md:bg-cover  
+            md:w-185 md:h-110 w-88 h-70 bg-center md:ml-[25%] ml-[1%] mr-[45%] md:mt-150 mt-60 bg-contain">
 
               <div className="flex flex-col text-center">
 
