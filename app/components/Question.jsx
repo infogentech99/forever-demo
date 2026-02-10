@@ -45,7 +45,7 @@ export default function Question() {
     };
     return (
         <>
-      <div className="w-full md:h-137 h-115 rounded-3xl overflow-hidden ">
+      <div className="w-full md:h-137 h-120 rounded-3xl overflow-hidden ">
   <div
     className="w-full h-full md:bg-[url('/question_bg.png')] bg-[url('/question_bg_mobile.png')] bg-no-repeat bg-center md:bg-contain bg-contain flex flex-col items-center justify-center rounded-3xl " >
              <h2 className="text-center leading-tight text-[30px] sm:text-5xl lg:text-[80px] flex flex-col items-center md:gap-y-6">

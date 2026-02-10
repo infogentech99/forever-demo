@@ -312,7 +312,7 @@ export default function Home() {
           )}
 
 
-          <div className="md:mt-280 mt-80 mx-4">
+          <div className="md:mt-280 mt-110 mx-4">
 <Question/>
     </div>
         </div>
