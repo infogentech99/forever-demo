@@ -252,7 +252,7 @@ export default function Home() {
               <img
                 src="/letter_box.png"
                 alt=""
-                className="animate-bounce [animation-duration:2s] md:w-95 md:h-125 w-75 h-65 transition-all duration-300
+                className="animate-bounce [animation-duration:2s] md:w-95 md:h-125 w-75 h-80 transition-all duration-300
                group-hover:scale-105
                group-hover:drop-shadow-[0_0_10px_rgba(255,215,0,0.9)]"
               />
@@ -302,13 +302,11 @@ export default function Home() {
 
           {showBook && (
             <div className="bg-[url('https://res.cloudinary.com/dx2di0mvx/image/upload/v1770709714/open_book_sgbaod.png')] bg-no-repeat md:bg-cover  
-            md:w-185 md:h-110 w-88 h-70 bg-center md:ml-[25%] ml-[1%] mr-[45%] md:mt-150 mt-60 bg-contain">
-
+            md:w-185 md:h-110 w-88 h-120 bg-center md:ml-[25%] ml-[1%] md:mr-[45%] mr-[0%] md:mt-150 mt-60 bg-contain">
               <div className="flex flex-col text-center">
-
               </div>
-
             </div>
+            
           )}
 
 
