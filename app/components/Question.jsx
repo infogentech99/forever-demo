@@ -53,6 +53,8 @@ export default function Question() {
                     <span className="font-cormorant md:text-4xl text-[#E5A292] text-xl px-12">{steps[step].question}</span>
                 </h2>
 
+                
+
                 <div className="flex flex-col md:flex-row items-center justify-center gap-5 mt-12">
                     {steps[step].buttons.map((btn, index) => (
                         <button
