@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useMemo } from "react";
+import {useEffect, useRef, useState, useMemo } from "react";
 import Question from "./components/Question";
 
 const FloationBallon = ({ className, style, reverse = false }: { className: string; style?: React.CSSProperties; reverse?: boolean }) => {
@@ -45,23 +45,45 @@ export default function Home() {
   const [started, setStarted] = useState(false);
   const [playing, setPlaying] = useState(false);
 
-  const startMusic = () => {
-    if (!audioRef.current) return;
-    audioRef.current.volume = 0.3;
-    audioRef.current.play();
-    setStarted(true);
-    setPlaying(true);
+  const startMusic = async () => {
+    const audio = audioRef.current;
+    if (!audio || started) return;
+
+    try {
+      audio.volume = 0.3;
+      await audio.play();
+      setStarted(true);
+      setPlaying(true);
+    } catch {}
   };
-  const toggleMusic = () => {
-    if (!audioRef.current) return;
+
+  const toggleMusic = async () => {
+    const audio = audioRef.current;
+    if (!audio) return;
 
     if (playing) {
-      audioRef.current.pause();
+      audio.pause();
+      setPlaying(false);
     } else {
-      audioRef.current.play();
+      try {
+        await audio.play();
+        setPlaying(true);
+      } catch {}
     }
-    setPlaying(!playing);
   };
+
+  // First user interaction (mobile + desktop)
+  useEffect(() => {
+    const handler = () => startMusic();
+
+    window.addEventListener("click", handler);
+    window.addEventListener("touchstart", handler);
+
+    return () => {
+      window.removeEventListener("click", handler);
+      window.removeEventListener("touchstart", handler);
+    };
+  }, [started]);
 
 
   return (
@@ -75,7 +97,7 @@ export default function Home() {
         {playing ? "⏸" : "▶"}
       </button>
 
-      <audio ref={audioRef} src="/valentine.mp3" loop />
+      <audio ref={audioRef} src="/valentine.mp3" loop preload="auto" playsInline/>
 
 
       <section className="relative w-full md:h-2200 h-1050 overflow-hidden ">
