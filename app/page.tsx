@@ -105,7 +105,7 @@ export default function Home() {
         <div
           className=" absolute inset-0 bg-center bg-cover hidden lg:block"
           style={{
-            backgroundImage: "url('https://res.cloudinary.com/dx2di0mvx/image/upload/v1770709090/forever_bg_indcwj.png')",
+            backgroundImage: "url('https://res.cloudinary.com/dx2di0mvx/image/upload/v1772005408/forever_demo_watermark_c7w425.webp')",
           }}
         />
 
@@ -113,7 +113,7 @@ export default function Home() {
   <div
           className=" absolute inset-0 bg-center bg-cover bg-no-repeat block lg:hidden"
           style={{
-            backgroundImage: "url('https://res.cloudinary.com/dx2di0mvx/image/upload/v1770721951/forever_bg_mobile_e6bird.png')",
+            backgroundImage: "url('https://res.cloudinary.com/dx2di0mvx/image/upload/v1772008739/forever_mobile_demo_watermark_iw0yk6.webp')",
           }}
         />
 
