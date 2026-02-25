@@ -113,7 +113,7 @@ export default function Home() {
   <div
           className=" absolute inset-0 bg-center bg-cover bg-no-repeat block lg:hidden"
           style={{
-            backgroundImage: "url('https://res.cloudinary.com/dx2di0mvx/image/upload/v1772008739/forever_mobile_demo_watermark_iw0yk6.webp')",
+            backgroundImage: "url('https://res.cloudinary.com/dx2di0mvx/image/upload/v1772009153/User_Detail_jpr9dj.png')",
           }}
         />
 
