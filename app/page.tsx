@@ -181,8 +181,6 @@ export default function Home() {
         {/* <FallingLamps /> */}
 
 
-
-
         <div className="relative z-10 flex flex-col  h-full text-white lg:pt-20 pt-20">
 
           <h2 className="text-[841426]  text-center leading-tight
